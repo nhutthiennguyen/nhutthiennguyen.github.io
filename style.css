@@ -1,7 +1,6 @@
 body{
-    background-image: url('d4bcc46e371e194b20854acd1ba3a86b.jpg');
-    opacity: 0,3;
-    font-family: segoe ui light;
+    background-image: linear-gradient(to right, rgb(144, 192, 144), rgb(152, 228, 152),rgb(71, 138, 71));
+    
 }
 .layer1 a img {
     width: 100%;

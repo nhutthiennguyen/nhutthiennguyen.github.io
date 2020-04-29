@@ -1,0 +1,54 @@
+*{
+    padding: 0; margin: 0;
+    font-family: segoe ui ;
+    box-sizing: border-box;
+    
+}
+.header{
+    height: 60px;
+}
+.icon-razer:hover {
+    transform: rotate(360deg);
+    transition: 3s;
+}
+.subMenu{
+    position: relative;
+}
+.subMenu1{
+    position: absolute;
+    top: 30px;
+    left: -50px;
+    display: none;
+    border-radius: 3px;
+    z-index: 1;
+    background-color: rgb(216, 211, 211);
+    
+}
+.subMenu:hover > .subMenu1{
+    display: block;
+    top: 40px;
+    left: 0px; 
+}
+ul{ 
+    text-transform: uppercase;
+}
+
+.menuItem:hover {
+    background-color: rgb(216, 211, 211);
+    
+}
+.ssubMenu{
+    position: relative;
+}
+.ssubMenu1{
+    position: absolute;
+    top: 0px;
+    left: 100%;
+    background-color: rgb(216, 211, 211);
+    border-radius: 3px;
+    display: none;
+   
+}
+.ssubMenu:hover .ssubMenu1{
+    display: block;
+}

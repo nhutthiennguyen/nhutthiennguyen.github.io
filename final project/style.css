@@ -26,6 +26,23 @@
     }
     
 }
+.icon{
+    position: relative;
+}
+.brand {
+    position: absolute;
+    display: none;
+    transition: 2s;
+}
+.icon:hover{
+    transform: rotate(360deg);
+    transition: 3s;
+}
+.myIcon:hover .brand{
+    display: block;
+    top: 15px;
+    left: 70px;
+}
 .social{
     display: flex;
     justify-content: center;
@@ -76,11 +93,6 @@
 .social > ul > li:hover > a > span:nth-child(1){
     transform: translate(0,0);
     opacity: .2;
-}
-
-.icon:hover{
-    transform: rotate(360deg);
-    transition: 3s;
 }
 .header{
     height: 60px;
@@ -138,6 +150,7 @@
     display: block;
     transform: scale(1.2);
     transition: 1s;
+    z-index: 10;
 }
 .ssubMenu{
     position: relative;
@@ -151,48 +164,25 @@
 }
 .ssubMenu:hover .ssubMenu1{
     display: block;
-}
-.container{
-    position: relative;
-}
-.container .cart {
-    position: relative;
-    width: 300px;
-    height: 450px;
-    background: #232323;
-    border-radius: 20px;
-    overflow: hidden;
-}
-.container .cart:before{
-    content: '';
-    position: absolute;
-    top: 0;left: 0;
-    width: 100%;
-    height: 100%;
-    background: #ccc;
-    clip-path: circle(150px at 80% 20%);
-    transition: 0.5s ease-in-out;
-}
-.container .cart:hover:before{
-    clip-path: circle(300px at 80% -20%);
-}
-.container .cart:after{
-    content: 'Corsair';
-    position: absolute;
-    top: 10%;left: 0;
-    font-size: 100px;
-    font-family: italic;
-}
-.cart img{
-    position: absolute;
-    top: 50%;
-    transform:translateY(-50%);
     z-index: 10;
-    width: 100%;
-    height: 200px;
-    transition: 0.5;
 }
-.cart:hover img{
-    top: 0%;
-    transform: translateY(0%);
+.search{
+    margin-left: auto;
+}
+.form{
+    margin-left: 350px;
+}
+.spCart{
+    margin-left: 100px;
+}
+.mySlide{
+    height: 390px;
+    border: black 3px solid;
+}
+.myBanner {
+    height: 390px;
+}
+.banner {
+    width: 100%;
+    height: 120px;
 }

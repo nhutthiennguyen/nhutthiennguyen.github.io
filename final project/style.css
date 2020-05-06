@@ -212,6 +212,7 @@
     animation: animatee 8s linear infinite;
 }
 .formSignin{
-    display: block;
-    margin-left: 100px;
+    position: relative;
+    top: 3px;
+    left: 500px;
 }

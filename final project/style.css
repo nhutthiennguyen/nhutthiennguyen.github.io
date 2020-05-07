@@ -4,6 +4,7 @@
     box-sizing: border-box;
     
 }
+/* slogan animation*/
 .slogan{
     position: relative;
     font-family: sans-serif;
@@ -43,6 +44,7 @@
     top: 15px;
     left: 70px;
 }
+/* Social animation*/
 .social{
     display: flex;
     justify-content: center;
@@ -99,48 +101,53 @@
     background: linear-gradient(90deg,rgb(228, 224, 224), rgb(228, 224, 224), rgb(228, 224, 224),#000,#000);
 }
 
-.myMenu > li{
-  margin: 0 10px;
-  transition: 0.5s;
+
+@media screen and (min-width:769px){
+ 
+    .myMenu > li{
+        margin: 0 10px;
+        transition: 0.5s;
+      }
+      .myMenu > li > a{
+          display: block;
+          position: relative;
+          padding: 5px;
+          font-size: 18px;
+          text-transform: uppercase;
+          transition: 0.5s;
+      }
+      .myMenu:hover > li > a{
+          transform: scale(1.5);
+          opacity: .2;
+          filter: blur(5px);
+      }
+      .myMenu > li > a:hover{
+          transform: scale(2);
+          opacity: 1;
+          filter: blur(0);
+          text-decoration: none;
+          color: white;
+      }
+      .myMenu > li > a:before{
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgb(243, 236, 236);
+          transition: 0.5s;
+          opacity:0.2;
+      }
 }
-.myMenu > li > a{
-    display: block;
-    position: relative;
-    padding: 5px;
-    font-size: 18px;
-    text-transform: uppercase;
-    transition: 0.5s;
-}
-.myMenu:hover > li > a{
-    transform: scale(1.5);
-    opacity: .2;
-    filter: blur(5px);
-}
-.myMenu > li > a:hover{
-    transform: scale(2);
-    opacity: 1;
-    filter: blur(0);
-    text-decoration: none;
-    color: white;
-}
-.myMenu > li > a:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(243, 236, 236);
-    transition: 0.5s;
-    opacity:0.2;
-}
+/* Multi-level menu*/
 .subMenu{
     position: relative;
 }
 .subMenu1{
     position: absolute;
-    top: 50px;
-    left: 0px;
+    top: 20px;
+    left: 80px;
     display: none;
     background-color: rgb(252, 248, 248);
     border-radius: 10px;
@@ -164,14 +171,14 @@
 }
 .ssubMenu:hover .ssubMenu1{
     display: block;
-    z-index: 10;
+    z-index: 10000;
 }
 .search{
     margin-left: auto;
 }
+/* button animation */
 .btnSignin {
     position: absolute;
-    top: 50%;left: 50%;
     transform: translate(-50%,-50%);
     width: 90px;
     height: 30px;
@@ -212,6 +219,160 @@
     animation: animatee 8s linear infinite;
 }
 .formSignin{
-    display: block;
-    margin-left: 100px;
+    margin-left: 500px;
+}
+/* text animation */
+.mainTitle{
+    position: relative;
+    margin-bottom: 50px;
+}
+h1.title{
+    text-transform: uppercase;
+    font-size: 50px;
+}
+h1.title:before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;left:0;
+    transform-origin: bottom;
+    transform: rotateX(180deg);
+    line-height: .97;
+    background: linear-gradient(0deg, #000 0 , transparent 80%);
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: 0.1;
+}
+/* card */
+.product{
+    position: relative;
+}
+.product .card{
+    position: relative;
+    width: 100%;
+    height: 450px;
+    background:#232323;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.product .card:before{
+    content: '';
+    position: absolute;
+    top: 0px;left: 0px;
+    width: 100%;
+    height: 100%;
+    background: red;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+.product .card:hover:before{
+    clip-path: circle(300px at 80% -20%);
+}
+.product .card:after{
+    content: 'Corsair';
+    position: absolute;
+    top: 30%;left: -20%;
+    font-size: 120px;
+    color: rgba(255, 255, 255, 0.04);
+    font-weight: 800;
+    font-family: italic;
+}
+.product .card .imgPd{
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+.product .card:hover .imgPd{
+    top: -10%;
+    transform: translateY(0%);
+}
+.product .card:hover .imgPd > img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-25deg);
+    width: 270px;
+}
+.product .card .contentPd{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    color: red;
+    transition: 1s;
+    z-index: 10;
+}
+.product .card:hover .contentPd{
+    height: 210px;
+}
+.product .card .contentPd > h2{
+    position: relative;
+    color: white;
+}
+.product .card .contentPd .switch, .product .card .contentPd .color{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+}
+.product .card .contentPd .switch h3,.product .card .contentPd .color h3{
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+.product .card .contentPd .switch > span{
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: 0.5s;
+    color: #111;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.product .card .contentPd .switch > span:hover{
+    background: red;
+}
+.product .card .contentPd .color > span{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ff0;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.product .card .contentPd .color > span:nth-child(2){
+    background: #fff;
+}
+.product .card .contentPd .color > span:nth-child(3){
+    background: #000;
+}
+.product .card .contentPd a{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #000;
+    transform: translateY(50px);
+    transition: 0.5s;
+    opacity: 0;
+}
+.product .card:hover .contentPd a{
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
 }

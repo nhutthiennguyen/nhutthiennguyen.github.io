@@ -1,12 +1,16 @@
 body{
-    background-image: linear-gradient(to right, rgb(144, 192, 144), rgb(152, 228, 152),rgb(71, 138, 71));
+    background-image: url('bg.jpg');
+}
+.information{
+    width: 960px;
+    height: auto;
+    margin: 0 auto;
+    color: white;
+    font-family: consolas;
+}
+.information .box {
+    display: flex;
+    justify-content: space-around;
     
-}
-.layer1 a img {
-    width: 100%;
-}
-.text1{
-    position: absolute;
-    top: 0px;
-    left: 0px;
+    text-align: center;
 }

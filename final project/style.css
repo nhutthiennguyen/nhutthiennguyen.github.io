@@ -1,4 +1,52 @@
-*{margin: 0;padding: 0;box-sizing: border-box;}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+    list-style: none;
+    margin:0;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 .mainmenu a, .navbar-default .navbar-nav > li > a, .mainmenu ul li a , .navbar-expand-lg .navbar-nav .nav-link{
     color:#fff;
     font-size:20px;
@@ -97,30 +145,6 @@
 .myMenu li a:hover .name span{
     transform: translateY(20px);
 }
-.slogan{
-    position: relative;
-    text-align: center;
-    color: #fff;
-    text-transform: capitalize;
-    overflow: hidden;
-    background: linear-gradient(90deg, #000, #fff, #000);
-    background-repeat: no-repeat;
-    background-size: 80%;
-    animation: animate 5s linear infinite;
-}
-.slogan h3{
-    font-size: 10px;
-    font-family: segoe ui light;
-}
-@keyframes animate {
-    0%{
-        background-position: -500%;
-    }
-    100%{
-        background-position: 500%;
-    }
-    
-}
 .slide{
         position: relative;
         top: 0;
@@ -203,23 +227,6 @@
         transition: 0.5s;
         transition-delay: 0.5s;
     }
-    .slogan1{
-        position: relative;
-        width: 100%;
-        text-align: center;
-        background: linear-gradient(0deg, #000,#262626);
-    }
-    .slogan1:before{
-        content: '';
-        position: absolute;
-        top: -2px;left: -2px;
-        width: calc(100% + 4px);
-        height: calc(100% + 4px);
-        background: linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000 );
-        background-size: 400%;
-        z-index: -1;
-        animation: animate1 20s linear infinite;
-    }
     @keyframes animate1{
         0%{
             background-position: 0 0;
@@ -231,12 +238,32 @@
             background-position: 0 0;
         }
     }
-    .slogan1 h3 {
-        text-transform: capitalize;
-        font-size: 10px;
-        font-family: segoe ui light;
-        color: rgb(109, 104, 104);
+    .slogan1:before{
+        content: '';
+        position: absolute;
+        top: -2px;left: -2px;
+        width: 100%;
+        height: calc(100% + 4px);
+        background: linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000 );
+        background-size: 400%;
+        z-index: -1;
+        animation: animate1 20s linear infinite;
     }
+    .slogan1{
+        position: relative;
+        width: 100%;
+        text-align: center;
+        background: linear-gradient(0deg, #000,#262626);
+        margin-top: 2px;
+        margin-bottom: 2px;  
+    }
+    .slogan1 h3 {
+        font-size: 14px;
+        font-family: segoe ui light;
+        color: #fff;
+        cursor: pointer;
+    }
+
     .banner{
         position: relative;
         width: 100%;
@@ -246,6 +273,16 @@
         background-position: 100% 100%;
         background-position: bottom;
     }
+    .banner1{
+        position: relative;
+        width: 100%;
+        height: 600px;
+        background-image: url('img/bg-home3.jpg');
+        background-size: cover;
+        background-position: 100% 100%;
+        background-position: bottom;
+    }
+    
     .banner .cloud{
         position: absolute;
         top: 0;left: 0;
@@ -282,10 +319,15 @@
         color: #fff;
         text-align: center;
     }
+footer{
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(0deg, #000,#262626);
+}
 @media only screen and (min-width: 767px) {
-    .slogan h3{
+    .banner h3{
         font-size: 30px;
-        color: rgb(109, 104, 104);
+        color: rgb(158, 153, 153);
     }
     .slogan1 h3 {
         font-size: 30px;
@@ -294,6 +336,12 @@
     .banner{
         height: 800px;
         background: url('img/bg-home1.jpg');
+        background-size: cover;
+        background-position: 100% 100%;
+    }
+    .banner1{
+        height: 800px;
+        background: url('img/bg-home4.jpg');
         background-size: cover;
         background-position: 100% 100%;
     }
@@ -310,12 +358,10 @@
     }
     .myMenu{
         display: flex;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        margin: 0;
+        width: 100%;
+        align-items: center;
         padding: 20px 0;
+        justify-content: center;
     }
     .myMenu li {
         text-align: center;

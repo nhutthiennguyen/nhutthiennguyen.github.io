@@ -187,7 +187,7 @@ svg circle:nth-child(2){
 }
 .profile .boxxx{
     position: relative;
-    width: 500px;
+    width: 50%;
     box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
     border-radius: 4px;
     text-align: center;

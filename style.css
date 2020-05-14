@@ -29,6 +29,9 @@ body{
     text-align: center;
     font-family: 'Quicksand', sans-serif;
 }
+.content{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+}
 .content .box .icon .fa {
     font-size: 50px;
     cursor: pointer;
@@ -248,7 +251,7 @@ svg circle:nth-child(2){
     color: #fff;
     transition: 0.4s;
 }
-.profile .boxxx .content{
+.profile .boxxx .contentt{
     position: relative;
     z-index: 10;
 }

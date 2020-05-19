@@ -1,0 +1,757 @@
+
+*{margin: 0;padding: 0;box-sizing: border-box;}
+.mainmenu a, .navbar-default .navbar-nav > li > a, .mainmenu ul li a , .navbar-expand-lg .navbar-nav .nav-link{
+    color:#fff;
+    font-size:20px;
+    text-transform:uppercase;
+    padding:10px 10px;font-family:'Roboto',sans-serif;
+    display: block !important;
+    
+}
+dl, ol, ul{
+    margin-bottom: 0;
+}
+.mainmenu .active a,.mainmenu .active a:focus,.mainmenu .active a,.mainmenu li a,.mainmenu li a:focus ,.navbar-default .navbar-nav>.show>a, .navbar-default .navbar-nav>.show>a:focus, .navbar-default .navbar-nav>.show>a:hover{
+    background: #383737;
+    outline: 0;
+    text-decoration: none;
+}
+.mainmenu .collapse ul > li > a{
+    background: #383737;
+    text-decoration: none;
+}
+.mainmenu .collapse ul ul > li > a, .navbar-default .navbar-nav .show .dropdown-menu > li > a:focus, .navbar-default .navbar-nav .show .dropdown-menu > li > a:hover{
+    background: #383737;
+    text-decoration: none;
+}
+.mainmenu .collapse ul ul ul > li > a{
+    background: #383737;
+    text-decoration: none;
+}
+.mainmenu{
+    background: none;
+    border: 0 solid;
+    margin: 0;padding: 0;
+    min-height:20px;
+    width: 100%;
+    background: #383737;
+}
+.icon{
+    position: relative;
+}
+.icon:hover{
+    transform: rotate(360deg);
+    transition: 3s;
+}
+.myMenu{
+    list-style: none;
+}
+.myMenu li{
+    text-align: center;
+    display: block;
+    border-bottom:1px solid rgba(0,0,0,.2);
+} 
+.myMenu li a .iconn{
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background: #383737;
+    overflow: hidden;
+    margin: 0 auto 10px;
+}
+.myMenu li a .iconn .fa{
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    font-size: 34px;
+    transition: 0.5s;
+    color: #fff;
+} 
+.myMenu li a:hover .iconn .fa{
+    transform: translateY(-100%);
+}
+.myMenu li a .iconn .fa:last-child{
+    color: rgb(8, 173, 8);
+}
+.myMenu li a .name{
+    position: relative;
+    height: 20px;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+.myMenu li a .name span{
+    display: block;
+    position: relative;
+    color: #fff;
+    font-size: 18px;
+    line-height: 20px;
+    transition: 0.5s;
+}
+.myMenu li a .name span:before{
+    content:attr(data-text);
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgb(8, 173, 8);
+}
+.myMenu li a:hover .name span{
+    transform: translateY(20px);
+}
+.dropdown:hover>.dropdown-menu{
+    display: block;
+}
+.dropdown-menu{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #383737;
+    margin: 0;
+    transition: 1s;
+}
+.dropdown-menu .dropdown-item:hover{
+    color:rgb(8, 173, 8) ;
+    background: none;
+    transition: 1s;
+}
+.jumbotron{
+    margin-top: 80px;
+    background: rgb(19, 18, 18);
+    width: 100%;
+    color: rgb(8, 173, 8);
+    font-family: segoe ui light;
+    text-align: center;
+}
+.jumbotron h5 {
+    color:#5e5d5d ;
+}
+.iconLaptop > ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-top: 20px;
+}
+.iconLaptop ul .iconHover {
+    width: 100px;
+    height: 80px;
+    text-align: center;
+    padding: 0 10px;
+    overflow: hidden;
+}
+.iconLaptop ul .iconHover li img {
+    width: 100%;
+    height: 100%;
+}
+ul li:hover a .iconHover img {
+    transform: translateY(-100%);
+}
+.iconLaptop ul li a{
+    text-decoration: none;
+    color:#5e5d5d ;
+}
+.iconLaptop ul li:hover a {
+    color:rgb(8, 173, 8) ;
+}
+.product{
+    position: relative;
+}
+.myRow{
+    background:#5e5d5d ;
+}
+.product .card{
+    position: relative;
+    width: 100%;
+    height: 450px;
+    background:#232323;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.product .card:before{
+    content: '';
+    position: absolute;
+    top: 0px;left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgb(8, 173, 8) ;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+.product .card:hover:before{
+    clip-path: circle(300px at 80% -20%);
+}
+.product .card:after{
+    content: 'Razer';
+    position: absolute;
+    top: 30%;left: -10%;
+    font-size: 120px;
+    color: rgba(255, 255, 255, 0.04);
+    font-weight: 800;
+    font-family: italic;
+}
+.product .card .imgPd{
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+.product .card:hover .imgPd{
+    top: -10%;
+    transform: translateY(0%);
+}
+.product .card:hover .imgPd > img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-25deg);
+    width: 270px;
+}
+.product .card .contentPd{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    color: red;
+    transition: 1s;
+    z-index: 10;
+    font-family: segoe ui light;
+}
+.product .card:hover .contentPd{
+    height: 210px;
+}
+.product .card .contentPd > h2{
+    position: relative;
+    color: white;
+}
+.product .card .contentPd .switch, .product .card .contentPd .color{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+}
+.product .card .contentPd .switch h3,.product .card .contentPd .color h3{
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+.product .card .contentPd .switch > span{
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: 0.5s;
+    color: #111;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.product .card .contentPd .switch > span:hover{
+    background: rgb(8, 173, 8) ;
+}
+.product .card .contentPd .color > span{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ff0;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.product .card .contentPd .color > span:nth-child(2){
+    background: #fff;
+}
+.product .card .contentPd .color > span:nth-child(3){
+    background: #000;
+}
+.product .card .contentPd a{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: rgb(8, 173, 8);
+    border-radius: 4px;
+    transform: translateY(50px);
+    transition: 0.5s;
+    opacity: 0;
+}
+.product .card:hover .contentPd a{
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+}
+.blade13{
+    position: relative;
+    width: 100%;
+    height: 366px;
+    background-image: url('img/bg13-moblie.jpg');
+    background-size: cover;
+    background-position: 100% 100%;
+    border-top: 1px solid rgb(8, 173, 8);
+}
+.blade13 h2{
+    font-family: segoe ui light;
+    text-align: center;
+    text-transform: uppercase;
+    color:rgb(8, 173, 8);
+    font-size: 20px;
+}
+.blade13 h4 {
+    font-family: segoe ui light;
+    text-align: center;
+    text-transform: capitalize;
+    color: #666565;
+}
+.blade13 > div,
+.blade15 > div {
+    text-align: center;
+}
+.blade13 > div a,
+.blade15 > div a{
+    text-decoration: none;
+    color:rgb(8, 173, 8) ;
+    padding-left: 20px;
+}
+.boxB{
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    width: 80px;
+    height: 80px;
+}
+.boxB a{
+    position: absolute;
+    top: 30%;
+    left: -18%;
+    text-decoration: none;
+    text-align: center;
+    font-size: 21px;
+    z-index: 1;
+}
+.border {
+    border: none !important;
+}
+.boxB::before{
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-top: 4px solid green;
+    border-bottom: 4px solid green;
+    transition: 0.5s;
+    transform: scaleX(0);
+}
+.boxB:hover:before{
+    transform: scaleX(1);
+}
+.boxB::after{
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-left: 4px solid green;
+    border-right: 4px solid green;
+    transition: 0.5s;
+    transform: scaleY(0);
+}
+.boxB:hover:after{
+    transform: scaleY(1);
+}
+.boxB span.border{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    transform: rotate(45deg);
+    pointer-events: none;
+    box-sizing: border-box;
+}
+.boxB span.border::before{
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-top: 4px solid green;
+    border-bottom: 4px solid green;
+    transition: 0.5s;
+    transform: scaleX(0);
+    
+}
+.boxB:hover span.border:before{
+    transform: scaleX(1);
+    transition-delay: .5s;
+}
+.boxB span.border::after{
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-left: 4px solid green;
+    border-right: 4px solid green;
+    transition: 0.5s;
+    transform: scaleY(0);
+    
+}
+.boxB:hover span.border:after{
+    transform: scaleY(1);
+    transition-delay: 1s;
+}
+.cubeVideo{
+    display: none;
+}
+.blade15{
+    position: relative;
+    width: 100%;
+    height: 366px;
+    background-image: url('img/bg15-mobile.jpg');
+    background-size: cover;
+    background-position: 100% 100%;
+    border-top: 1px solid rgb(8, 173, 8);
+}
+.bannerV{
+    display: none;
+}
+.blade15 > h2{
+    text-align: center;
+    font-family: segoe ui light;
+    color:rgb(8, 173, 8);
+}
+.blade15 h4{
+    text-align: center;
+    font-family: segoe ui light;
+    color:#666565  ;
+}
+.boxB15{
+    top: 61%;
+    left: 38%;
+}
+.blade17{
+    position: relative;
+    width: 100%;
+    height: 366px;
+    background-image: url('img/bg17-mobile.jpg');
+    background-size: cover;
+    background-position: 100% 100%;
+    border-top: 1px solid rgb(8, 173, 8);
+}
+.content17{
+    width: 320px;
+    height: 200px;
+    color:#666565 ;
+}
+.content17 a {
+    color:rgb(8, 173, 8) ;
+    text-decoration: none;
+}
+.content17 p:nth-child(3){
+    display: none;
+}
+.box17 > a{
+    left: 4% !important;
+    color: rgb(8, 173, 8);
+}
+.bladeStudio{
+    width: 100%;
+    height: 366px;
+    background-image: url('img/bg-studio-mobile.jpg');
+    background-size: cover;
+    background-position: 100% 100%;
+    border-top: 1px solid rgb(8, 173, 8);
+}
+.bladeStudio .contentS p:nth-child(3){
+    display: none;
+}
+.contentS h2{
+    margin: 0;padding: 0;
+    font-family: segoe ui light;
+    color: #6e6c6c;
+}
+.contentS div a{
+    color: rgb(8, 173, 8) !important;
+    text-decoration: none;
+}
+.monitor{
+    width: 100%;
+    height: 366px;
+    background-image: url('img/monitor.jpg');
+    background-size: cover;
+    background-position: center;
+    border-top: 1px solid rgb(8, 173, 8);
+}
+.monitor{
+    text-align: center;
+    font-family: segoe ui light;
+}
+.monitor h2 {
+    color:rgb(8, 173, 8) ;
+}
+.monitor h4{
+    color: #ccc;
+}
+.monitor div a{
+    color: rgb(8, 173, 8) !important;
+    text-decoration: none;
+}
+footer{
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(0deg, #000,#262626);
+}
+.social  ul{
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    width: 100%;
+    align-items: center;
+    
+}
+.social > ul > li{
+    position: relative;
+    list-style: none;
+    width: 60px;
+    height: 60px;
+    margin: 0px 30px;
+    transform: rotate(-30deg) skew(30deg);
+    background: #ccc;
+    
+}
+.social > ul > li > a > span{
+    position: absolute;
+    top: 0px;left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 30px ;
+}
+.social > ul > li:hover > a > span:nth-child(5){
+    transform: translate(40px,-40px);
+    opacity: 1;
+}
+.social > ul > li:hover > a > span:nth-child(4){
+    transform: translate(30px,-30px);
+    opacity: .8;
+}
+.social > ul > li:hover > a > span:nth-child(3){
+    transform: translate(20px,-20px);
+    opacity: .6;
+}
+.social > ul > li:hover > a > span:nth-child(2){
+    transform: translate(10px,-10px);
+    opacity: .4;
+}
+.social > ul > li:hover > a > span:nth-child(1){
+    transform: translate(0,0);
+    opacity: .2;
+}
+.social ul li:nth-child(1) span{
+    background: #3b5999; 
+}
+.social ul li:nth-child(2) span{
+    background: #55acee; 
+}
+.social ul li:nth-child(3) span{
+    background: #dd4b39; 
+}
+.social ul li:nth-child(4) span{
+    background: #0077b5; 
+}
+.social ul li:nth-child(5) span{
+    background: #e4405f; 
+}
+@media only screen and (min-width: 769px) {
+    .dropdown-menu{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 220px;
+        height: auto;
+    }
+    .myMenu{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .myMenu > li {
+        text-align: center;
+        display: block;
+        padding: 0 50px;
+        border-right: 1px solid rgba(0,0,0,.2);
+        border-bottom: none;
+    }
+    .blade13{
+        height: 850px;
+        background-image: url('img/bg13-pc.jpg');
+    }
+    .blade15{
+        height: 850px;
+        background-image: url('img/bg15-pc.jpg');
+    }
+    .blade17{
+        height: 850px;
+        background-image: url('img/bg17-pc.jpg');
+    }
+    .content17 p:nth-child(3){
+        display: block;
+    }
+    .content17{
+        width: 330px;
+        height: 200px;
+        margin-left: 50%;
+        margin-top: 5%;
+        font-family: segoe ui light;
+        font-size: 20px;
+    }
+    .bladeStudio{
+        height: 850px;
+        background-image: url('img/bg-studio-pc.jpg');
+    }
+    .monitor{
+        height: 850px;
+        background-image: url('img/monitor.jpg');
+    }
+    .iconLaptop ul .iconHover {
+        width: 100px;
+        height: 80px;
+        text-align: center;
+        padding: 0 10px;
+        overflow: hidden;
+    }
+    .iconLaptop ul .iconHover li img {
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+    }
+    .blade13 h2,h4 .div{
+        font-size: 50px;
+        margin-top: -10%;
+    }
+    .cubeVideo{
+        display: block;
+        position: relative;
+        top:50%;
+        left:70% ;
+        width: 300px;
+        height: 300px;
+    }
+    .cubeVideo .boxV{
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        transform-style: preserve-3d;
+    }
+    .cubeVideo .boxV > div{
+        position: absolute;
+        top: 0;left: 0;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transform:rotateX(-20deg) rotateY(25deg) translate3d(-70px,-70px,150px) ;
+    }
+    .cubeVideo .boxV > div span {
+        position: absolute;
+        top: 0;left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 1px solid rgba(0, 0, 0, .1);
+        background: #ccc;
+    }
+    .cubeVideo .boxV > div span:nth-child(1){
+        transform: rotateX(0deg) translate3d(0,0,150px);
+    }
+    .cubeVideo .boxV > div span:nth-child(2){
+        transform: rotateY(90deg) translate3d(0,0,-150px);
+    }
+    .cubeVideo .boxV > div span:nth-child(3){
+        transform: rotateX(90deg) translate3d(0,0,150px);
+    }
+    .cubeVideo .boxV > div video {
+        position: absolute;
+        top: 0;left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+       
+    }
+    .bannerV{
+        display: block;
+        position: absolute;
+        left: 40%;
+        width: 480px;
+        height: 120px;
+        overflow: hidden;
+    }
+    .bannerV video {
+        position: absolute;
+        top: 0;left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background: none;
+        border-radius: 10px;
+    }
+    .bannerV h2 {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background:none;
+        font-family: segoe ui light;
+        font-weight: 900;
+        font-size: 150px;
+        mix-blend-mode: screen;
+    }
+    .blade15 > h2 {
+        margin-top: 7%;
+    }
+    .boxB{
+        display: none;
+    }
+    .bladeStudio .contentS p:nth-child(3){
+        display: block;
+    }
+    .contentS{
+        width: 330px;
+        height: 200px;
+        margin-left: 70%;
+        margin-top: 5%;
+        font-family: segoe ui light;
+        font-size: 20px;
+        color: #ccc;
+    }
+}

@@ -79,4 +79,10 @@ Define a function allowing input 2 params: day, month
 Output: -Today, 2nd June (Month's name)
 Validate input data:
 -day, month are required/
-- day, month must be number */
+- day, month must be number 
+*/
+function dateAndMonth(day,month){
+    //validate 
+    //validate number, string
+    //show day and month covert to string
+}

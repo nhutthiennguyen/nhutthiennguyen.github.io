@@ -81,8 +81,8 @@ Validate input data:
 -day, month are required/
 - day, month must be number 
 */
-function dateAndMonth(day,month){
+//function dateAndMonth(day,month){
     //validate 
     //validate number, string
     //show day and month covert to string
-}
+    

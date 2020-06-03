@@ -5,10 +5,13 @@ What is callback?
 -asynchronous: khi chạy các tác vụ nặng thì cần sữ dụng bất đồng bộ
 */
 //Higher order function
- function makeAdjectifier(adjective){
-     return function (string){
-         return adjective + ' ' + string;
-     };
- }
- var coolifier = makeAdjectifier('cool');
- coolifier('conference');
+const greeting = {
+    name: function(validate){
+        console.log('hello ');
+        validate();
+    }
+}
+const xer = () =>{
+    console.log('cacccccc');
+};
+greeting.name(xer);

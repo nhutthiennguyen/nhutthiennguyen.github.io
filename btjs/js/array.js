@@ -49,6 +49,7 @@ if sort func return a < 0
 //     }
 //     console.log(i);
 // };
+// co the dung vong lap for voi dieu kien va break;
 
 //forEach là hàm để duyệt các phần tử trong array
 //callback

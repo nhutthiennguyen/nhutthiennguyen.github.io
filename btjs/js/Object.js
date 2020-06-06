@@ -96,10 +96,8 @@ const classificationStudents = avgScore.map((x)=>{
             return x + ' Exellent';
         }
 });
-console.log(classificationStudents);
 
 const newStudents = [...students];
-newStudents.forEach(x =>{
-    
-})
+newStudents.forEach(x =>x.avgScore= x.Math + x.English / 2);
+console.log(newStudents);
 

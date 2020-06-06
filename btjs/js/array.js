@@ -1,4 +1,5 @@
 const myArray = ['Spring', 'Summer', 0, 3, 'Autumn', 'Winter'];
+// dat bien toan cuc thong qua window.MYVAR = "adsad"
 // co the chua bat cu thu gi trong js
 // array co index danh theo thu tu tu` 0
 // co thuoc tinh length 

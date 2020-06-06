@@ -20,6 +20,7 @@ Math.min(param1, param2 ...)
     lượt số nhỏ nhất
 Math.random
     auto trả về 1 số từ 0 - 1
+
 */
 //Math.random toss a coin
 const tossACoin = () =>{
@@ -56,6 +57,19 @@ const i = students.forEach((x , y)=>{
 const femaleStudents = students.filter((x) => x.gender === 'female');
 const marriedStudents = students.filter((x)=> x.married);
 
+function sum(){
+    let result = 0;
+    for (let i = 0; i <= arguments.length; i++) {
+        if (typeof arguments[i] !== 'number'){
+            console.log('agruments should be numbers');
+            result = 0;
+            break;
+        }
+        else{
+             result = result + arguments[i];
+        }
+    }
+};
 // let nameStudents = [];
 // students.forEach((x)=>{
 //     nameStudents.push(x.name);
@@ -78,7 +92,7 @@ const studentsName = students.map((x)=>({name: x.name, age: x.age}))
 const avgScore = students.map(x => x.Math + x.English);
     console.log('total score ' + avgScore);
 
-const higherAvgScore = avgScore.map(x => x /2).filter(x => x > 5)
+const higherAvgScore = avgScore.map(x => x /2).filter(x => x > 5).sort((x, y)=> y - x);
     console.log('Average Score '  + higherAvgScore);
 
 const classificationStudents = avgScore.map((x)=>{
@@ -86,18 +100,19 @@ const classificationStudents = avgScore.map((x)=>{
         if (x < 5){
             return x + ' Below Average';
         }
-        else if (x > 5 && x < 7){
+        else if (x > 5 && x <= 7){
             return x + ' Average';
         }
-        else if (x > 7 && x < 8.4){
+        else if (x > 7 && x <= 8.4){
             return x + ' Good';
         }
         else if (x > 8.4){
             return x + ' Exellent';
         }
 });
+console.log(classificationStudents);
 
 const newStudents = [...students];
-newStudents.forEach(x =>x.avgScore= x.Math + x.English / 2);
+newStudents.forEach(x => x.avgScore = (x.Math + x.English) / 2);
 console.log(newStudents);
 

@@ -1,4 +1,5 @@
 //contructor func
+// prototypes is a object is shared among all of the object created by new 
 function Mouse(name, weight, color) {
     this.name = name,
     this.weight = weight,
@@ -28,4 +29,11 @@ const bird3 = new Bird('cacc', 0.5, 1000, 'red');
 const bird4 = new Bird('titi', 0.3, 200, 'yellow');
 const bird5 = new Bird('tit', 0.4, 400, 'purple');
 cage.enCase(bird1).enCase(bird2).enCase(bird3).enCase(bird4).enCase(bird5);
-console.log(cage);
+// console.log(cage);
+// add properties by prototypes
+Bird.prototype.fly = ()=>{
+    console.log('phạch phạch');
+};
+const Hoami = new Bird('los', 0.3, 300,'green');
+console.log(Hoami);
+Hoami.fly();

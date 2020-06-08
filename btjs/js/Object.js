@@ -20,6 +20,7 @@ Math.min(param1, param2 ...)
     lượt số nhỏ nhất
 Math.random
     auto trả về 1 số từ 0 - 1
+ternary operator
 
 */
 //Math.random toss a coin
@@ -115,4 +116,13 @@ console.log(classificationStudents);
 const newStudents = [...students];
 newStudents.forEach(x => x.avgScore = (x.Math + x.English) / 2);
 console.log(newStudents);
+
+
+// lab toss a coin using ternary operator
+const tossCoin = ()=>{
+    const value = Math.random();
+    const result1 = (value < 0.5) ? 'Mặt sấp' : 'Mặt ngữa';
+    console.log(result1);
+}
+// remake firt hw 
 

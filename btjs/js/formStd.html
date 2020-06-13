@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="formStd.css">
+</head>
+<body>
+    <table class="tbl-std">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Age</td>
+                <td>Gender</td>
+                <td>Math</td>
+                <td>English</td>
+            </tr>
+        </thead>
+        <tbody class="bdy-std">
+
+        </tbody>
+    </table>
+    <div class="form">
+        <label  for="name" class="label-name">
+            <span>Name</span>
+        </label>
+        <input id="name" type="text">
+        <label for="number" class="label-number">
+            <span>Age</span>
+        </label>
+        <input id="number" type="number">
+        <form id="gender">
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </form>
+        <label for="math" class="label-math">
+            <span>Math</span>
+        </label>
+        <input id="math" type="number">
+        <label for="english" class="label-number">
+            <span>English</span>
+        </label>
+        <input id="english" type="number">
+        <input id="submit" style="margin-top: 10px;" type="submit">
+            
+    <script src="formStd.js"></script>
+    </div>
+</body>
+</html>

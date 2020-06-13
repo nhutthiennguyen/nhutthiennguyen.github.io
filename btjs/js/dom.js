@@ -14,8 +14,14 @@
     change button to Udo
 
 */
-const $h1 = document.getElementById('change');
-const $change = document.querySelector('btn-click');
-$change = addEventListener('click',()=>{
-    $h1.style.border = '1px solid black'
-});
+// const $h1 = document.getElementById('change');
+// const $change = document.querySelector('btn-click');
+// $change = addEventListener('click',()=>{
+//     $h1.style.border = '1px solid black'
+// });
+const $h1 = document.querySelector('h1');
+const $btn = document.querySelector('.btn-click');
+let isChanged = false;
+function changeText(){
+
+};

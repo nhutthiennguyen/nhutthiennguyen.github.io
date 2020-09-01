@@ -195,6 +195,7 @@ svg circle:nth-child(2){
     border-radius: 4px;
     text-align: center;
     overflow: hidden;
+    line-height: 1;
 }
 .profile .boxxx .tittle{
     position: relative;
@@ -254,6 +255,9 @@ svg circle:nth-child(2){
 .profile .boxxx .contentt{
     position: relative;
     z-index: 10;
+    text-align: left;
+    margin-left: 10px;
+    
 }
 @media screen and (min-width: 769px){
     .box{
